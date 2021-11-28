@@ -1,0 +1,44 @@
+.work {
+  padding-bottom: 94px;
+
+  &__title {
+    color: $title-text-color;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    @extend %list;
+  }
+
+  &__item {
+    position: relative;
+  }
+}
+
+.discription {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14em;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $button-text-color;
+  background: rgba(47, 48, 58, 0.8);
+  margin: 0;
+}

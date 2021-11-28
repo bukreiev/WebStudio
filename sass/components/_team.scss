@@ -1,0 +1,83 @@
+.team {
+  background-color: $team-background-color;
+  padding: 94px 0;
+
+  &__title {
+    color: $title-text-color;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 0;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    @extend %list;
+  }
+
+  &__item {
+    background-color: $button-text-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+}
+
+.worker {
+  padding: 30px 32px;
+
+  &__name {
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  &__prof {
+    color: $text-color;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+.network {
+  display: flex;
+  @extend %list;
+
+  &__item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    fill: $icon-color;
+    transition: background-color $transition;
+
+    &:hover,
+    &:focus {
+      background-color: $hover-color;
+      fill: $button-text-color;
+    }
+  }
+}

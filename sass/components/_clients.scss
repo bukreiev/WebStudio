@@ -1,0 +1,38 @@
+.clients {
+  padding-top: 94px;
+
+  &__title {
+    color: $title-text-color;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 0;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 94px;
+    @extend %list;
+  }
+  &__link {
+    width: 170px;
+    height: 92px;
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    fill: $icon-color;
+    transition: fill $transition;
+
+    &:hover,
+    &:focus {
+      fill: $hover-color;
+      border: 1px solid $hover-color;
+    }
+  }
+}

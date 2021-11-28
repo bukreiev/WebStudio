@@ -1,0 +1,140 @@
+.footer {
+  background-color: $footer-background-color;
+  color: $button-text-color;
+  padding: 60px 0;
+}
+
+.logo--footer {
+  color: $button-text-color;
+}
+
+.address {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-top: 20px;
+  @extend %list;
+
+  &__item {
+    margin-bottom: 9px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__contact {
+    color: $button-text-color;
+  }
+  &__link {
+    display: block;
+    color: $footer-link-color;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    transition: color $transition;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+
+.social {
+  margin-left: 70px;
+  padding-top: 12px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+}
+
+.network__link--dark {
+  fill: $button-text-color;
+  background: rgba(255, 255, 255, 0.1);
+
+  &:hover,
+  &:focus {
+    background: $hover-color;
+  }
+}
+
+.subscribe {
+  margin-left: 93px;
+  padding-top: 12px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+}
+
+.follow {
+  display: flex;
+
+  &__input {
+    display: block;
+    width: 358px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding-left: 16px;
+    outline: none;
+    transition: border-color $transition;
+    margin-right: 12px;
+  }
+  &:focus-within {
+    .follow__input {
+      border-color: $hover-color;
+    }
+  }
+
+  &__btn {
+    width: 200px;
+    height: 50px;
+    background-color: $hover-color;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.88em;
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    letter-spacing: 0.06em;
+    border: none;
+    border-radius: 4px;
+    color: $button-text-color;
+    padding-left: 29px;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+    &::after {
+      content: " ";
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+      background-image: url(../images/icon-send.svg);
+    }
+  }
+}
