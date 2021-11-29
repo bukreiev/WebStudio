@@ -1,18 +1,34 @@
 .portfolio {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 .filter {
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  flex-wrap: wrap;
   margin-top: 0;
-  margin-bottom: 50px;
   @extend %list;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    justify-content: center;
+  }
 
   &__item {
     margin-right: 8px;
+    margin-bottom: 8px;
 
-    &:last-child {
-      margin-right: 0;
+    &:nth-last-of-type(-n + 2) {
+      margin-bottom: 0;
     }
   }
   &__button {
@@ -43,16 +59,38 @@
 }
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+  min-width: 480px;
   list-style: none;
 
-  &__list {
+  @media screen and (min-width: 768px) {
+    min-width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: 1200px;
+  }
+
+  &__item {
+    height: auto;
     position: relative;
-    margin: 15px;
     transition: box-shadow $transition;
     cursor: pointer;
+    max-width: 480px;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin: 15px;
+      width: calc((100% - 2 * 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 3 * 30px) / 3);
+    }
 
     &:hover,
     &:focus {
