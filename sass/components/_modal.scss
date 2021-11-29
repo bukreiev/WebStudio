@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity $transition, visibility $transition;
@@ -24,28 +24,39 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+
+  width: 450px;
+  height: auto;
   padding: 40px;
+
   background-color: $button-text-color;
   transform: translate(-50%, -50%) scale(1);
   transition: transform $transition;
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 
   &__close {
     position: absolute;
     top: 8px;
     right: 8px;
+
     width: 30px;
     height: 30px;
+
     background-color: $button-text-color;
+
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
+
     cursor: pointer;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 
-    &:hover {
+    &:hover,
+    &:focus {
       fill: $hover-color;
     }
   }
@@ -61,7 +72,9 @@
     line-height: 23px;
     text-align: center;
     letter-spacing: 0.03em;
+
     color: $title-text-color;
+
     margin-bottom: 12px;
   }
 }
@@ -69,8 +82,8 @@
 // modal form
 
 .mform {
-  width: 448px;
-  height: 342px;
+  width: 100%;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
 
@@ -78,6 +91,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    width: 100%;
 
     &:focus-within {
       .input__in {
@@ -147,8 +161,8 @@
 .input {
   position: relative;
   &__in {
-    width: 448px;
-    height: 40px;
+    width: 100%;
+    min-height: 40px;
     background: $button-text-color;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
@@ -178,11 +192,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
     letter-spacing: 0.03em;
     color: $text-color;
     cursor: pointer;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
   }
 
   &__input {
@@ -212,28 +230,5 @@
   &__link {
     text-decoration-line: underline;
     color: $hover-color;
-  }
-
-  &__submit {
-    width: 200px;
-    height: 50px;
-    background-color: $hover-color;
-    color: $button-text-color;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.06em;
-    border-radius: 4px;
-    transition: background-color $transition;
-    border: none;
-    padding: 10px 55px;
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-      background-color: $button-hover-color;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    }
   }
 }

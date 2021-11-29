@@ -7,6 +7,10 @@
 
 .logo--footer {
   color: $button-text-color;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
 }
 
 .address {
@@ -76,6 +80,10 @@
 }
 
 .subscribe {
+  @media screen and (min-width: 768px) {
+    margin-top: 60px;
+  }
+
   @media screen and (min-width: 1200px) {
     margin-top: 0;
     padding-top: 5px;
@@ -118,6 +126,13 @@
 
     padding-left: 16px;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
   }
   &:focus-within {
     .follow__input {
