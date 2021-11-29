@@ -14,7 +14,7 @@ body {
   font-family: "Roboto", sans-serif;
   background: #fff;
   color: #757575;
-  margin: 0 auto;
+  margin: 0;
 }
 
 h1,
@@ -31,14 +31,42 @@ ul {
 }
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .container {
-  @extend %container;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 .container--footer {
-  @extend %container;
-  display: flex;
-  justify-content: left;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 450px;
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: left;
+  }
 }

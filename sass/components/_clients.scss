@@ -1,33 +1,76 @@
 .clients {
-  padding-top: 94px;
-
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   &__title {
     color: $title-text-color;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.16;
     letter-spacing: 0.03em;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-top: 0;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
   }
   &__list {
+    padding: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 94px;
-    @extend %list;
+    margin: -15px;
+    flex-wrap: wrap;
+    list-style: none;
+    @media screen and (min-width: 768px) {
+      width: 768px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 1200px;
+      flex-wrap: nowrap;
+      margin: 0;
+    }
   }
-  &__link {
-    width: 170px;
-    height: 92px;
-    border: 1px solid $icon-color;
-    border-radius: 4px;
+
+  &__item {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    margin: 15px;
+
+    width: calc((100% - 2 * 30px) / 2);
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 3 * 30px) / 3);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 6 * 30px) / 6);
+      margin: 0;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+
     fill: $icon-color;
-    transition: fill $transition;
+    transition: fill $transition, border $transition;
 
     &:hover,
     &:focus {

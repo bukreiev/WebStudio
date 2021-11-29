@@ -1,24 +1,60 @@
 .features-section {
-  padding: 94px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .features {
-  @extend %list;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    margin: 0;
+  }
 
-  display: flex;
-  justify-content: space-between;
+  &__item {
+    max-width: 450px;
+    margin-bottom: 30px;
 
-  &__list {
-    width: 270px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 354px;
+      margin: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 270px;
+      margin: 0;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 
   &__logo {
-    display: flex;
-    width: 270px;
+    max-width: 450px;
     height: 120px;
     background-color: $team-background-color;
+    margin-bottom: 30px;
+
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 270px;
+    }
   }
 
   &__title {
@@ -29,6 +65,15 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 10px;
+    max-width: 450px;
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+      max-width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 270px;
+    }
   }
 
   &__text {
@@ -37,5 +82,12 @@
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    max-width: 450px;
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
   }
 }
