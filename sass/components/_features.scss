@@ -29,8 +29,10 @@
       max-width: 354px;
       margin: 15px;
     }
+
     @media screen and (min-width: 1200px) {
       max-width: 270px;
+      margin: 0;
       margin-right: 30px;
 
       &:last-child {
@@ -70,6 +72,7 @@
 
     @media screen and (min-width: 768px) {
       max-width: 354px;
+      text-align: left;
     }
     @media screen and (min-width: 1200px) {
       max-width: 270px;

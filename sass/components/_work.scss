@@ -30,6 +30,11 @@
 
   &__item {
     position: relative;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
